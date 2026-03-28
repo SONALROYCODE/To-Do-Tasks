@@ -1,0 +1,266 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    padding:10px;
+}
+
+.stretch{
+    background-repeat: no-repeat;
+    background-size: 100%;  
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width:100%;
+    padding: 0 10px;
+    margin-top:90px;
+}
+
+.stat-container{
+    padding: 15px 20px;
+    background:rgba(14, 14, 11, 0.3);
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    border: 2px solid dimgray;
+    border-radius:10px;
+    gap:20px;
+    width:100%;
+}
+
+.details{
+    width:100%;
+
+}
+
+.details h2{
+    color:#fff;
+    margin-bottom: 20px;
+}
+
+#numbers {
+    color: #fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:80px;
+    height:80px;
+    background:#c5ac77;
+    border:2px solid rgba(240, 240, 221, 0.3);
+    font-weight:bold;
+    border-radius:50%;
+    font-size:1.5rem;
+}
+
+#borderr{
+    border:2px solid black;
+    height:8.5px;
+    width:100%;
+    border-radius:20px;
+}
+
+#progresssbar{
+    width:100%;
+    height:7px;
+    background:rgba(10, 17, 22,0.3);
+    border-radius:20px;
+    position:absolute;
+    margin-top:15px;
+    border:2px solid rgba(244, 244, 225, 0.3);   
+}
+
+#progress{
+    width:100%;
+    height:7px;
+    background:#c5ac77;;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+    border:1px solid rgba(14, 14, 11, 0.3);
+}
+
+.todoapp{
+    height:100%;
+    width:100%;
+    max-width:400px;
+    padding: 2rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    gap: 30px;
+    color:rgb(10, 17, 22);
+    cursor:pointer;
+    border-radius: 20px;
+    box-shadow: 0 0 100px rgba(68, 25, 4, 20);
+    border:4px solid rgba(53, 50, 33, 0.18);
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+ 
+.todoapp:hover{
+    transform: translateY(-10px) scale(1);
+    box-shadow: 0 0 40px rgba(255,255,255,0.18);
+}
+.empty-img{
+    padding-right: 25%;
+    width: 50%;
+    height: 50%;
+}
+
+
+.todoapp h1{
+    font-size:2rem;
+}
+
+.inputs{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:100%;
+gap:1rem;
+}
+
+.inputs input{
+
+flex:1;
+padding: 10px 17px;
+font-size:1.1rem;
+border:2px solid rgb(211, 199, 199);
+outline:none;
+border-radius:22px;
+background:rgba(14, 14, 11, 0.3);
+color:bisque;
+}
+
+.inputs input::placeholder{
+    color:rgb(248, 249, 250);
+    padding:20%;
+}
+
+.inputs button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:10px;
+    padding:8px;
+    border-radius:50%;
+    color:rgb(17, 17, 4);
+    font-size:1.1rem;
+    background:rgba(244, 244, 225, 0.3);
+    cursor:pointer;
+    transition: all 0.2s ease;
+    border:2px dashed;
+}
+
+.inputs button:hover{
+    transform:scale(1);
+    background:#f0efec;
+    border:none;
+}
+
+.todoContainer{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#task-list{
+    width:100%;
+
+}
+
+#task-list li {
+    width:90%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:rgba(14, 14, 11, 0.3);
+    appearance:none;
+    margin-bottom:10px;
+    padding:8px 10px;
+    border-radius:30px;
+    font-size:1.2rem;
+    color:#ffffff;
+    position:relative;
+    transition: box-shadow 1.2s ease;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#task-list li:hover {
+    box-shadow: 0 0 10px rgba(246, 246, 243, 0.1);
+
+}
+#task-list li .checkbox {
+    min-width:20px;
+    height:20px;
+    border-radius: 50%;
+    border:2px solid rgba(68, 25, 4, 20);
+    background:transparent;
+    appearance:none;
+    cursor:pointer;
+    transition: all 0.2s;  
+}
+
+#task-list li .checkbox:checked{
+    background:rgb(61, 61, 60);
+    transform: scale(1.1);
+}
+
+#task-list li .checkbox:checked::before{
+    content:"\2713";
+    color:#f8f8f8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#task-list li.completed span {
+    text-decoration: 1.5px line-through #6b4d11;
+    color:rgb(242, 241, 241);
+}
+.task-btns{
+    display:flex;
+    gap:10px;
+    margin-left: auto;
+}
+
+.task-btns button{
+    background:rgba(244, 244, 225, 0.048);
+    border:none;
+    border-radius:50%;
+    width:30px;
+    height:30px;
+    color:#fff;
+    font-size: 0.8rem;
+    cursor:pointer;
+    transition: all 0.2s ease;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-btns button:hover{
+    transform:scale(1.2);
+}
+
+.task-btns .edit{
+    background:rgb(241, 224, 173);
+    transform: scale(1.1);
+}
+
+.task-btns .delete{
+     background:rgb(244, 205, 139);
+    transform: scale(1.1);
+}
+
